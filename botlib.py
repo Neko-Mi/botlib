@@ -3,6 +3,13 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
+
+URL = 'https://mangalib.me/user/351818'
+
+LOGIN = 'asdf@asdf.com'
+PASSWORD = 'asdfasdfasfd'
+
+
 def sendmessage(browser, i):
     elem = browser.find_element_by_xpath("//div["
                                          "@class='post-reply-placeholder__text']") # Find the query box
@@ -74,8 +81,4 @@ def start(url, login, password):
 
 
 if __name__ == '__main__':
-    start(
-        'https://mangalib.me/user/351818',
-        'ffff@ggg.com',
-        'ffffffff'
-    )
+    start(URL, LOGIN, PASSWORD)
