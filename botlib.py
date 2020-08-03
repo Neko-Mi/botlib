@@ -1,8 +1,5 @@
 import os
-from bs4 import BeautifulSoup
 import time
-from selenium import webdriver
-
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
@@ -67,8 +64,8 @@ def auth(browser, login, password):
 
 def start(url, login, password):
     browser = webdriver.Chrome('chromedriver.exe')
-    browser.get(url) # Load page
-    # assert "Яндекс".decode("utf-8") in browser.title
+    browser.get(url) 
+
     auth(browser, login, password)
 
     browser.get(url)
@@ -76,13 +73,9 @@ def start(url, login, password):
     doignor(browser)
 
 
-    time.sleep(5) # Let the page load, will be added to the API
-
 if __name__ == '__main__':
     start(
         'https://mangalib.me/user/351818',
-        'login',
-        'password'
+        'ffff@ggg.com',
+        'ffffffff'
     )
-
-
